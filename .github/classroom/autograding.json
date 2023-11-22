@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "pytest",
+      "setup": "",
+      "run": "/opt/conda/bin/pytest -s test_de.py --cov-report=json --cov",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "pytest",
+      "setup": "",
+      "run": "/opt/conda/bin/pytest -vs test_coverage.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 50
+    }
+  ]
+}
