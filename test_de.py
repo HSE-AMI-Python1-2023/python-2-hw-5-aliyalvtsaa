@@ -3,6 +3,7 @@ import numpy as np
 
 from differential_evolution import DifferentialEvolution
 
+
 def rastrigin(array, A=10):
     return A * 2 + (array[0] ** 2 - A * np.cos(2 * np.pi * array[0])) + (array[1] ** 2 - A * np.cos(2 * np.pi * array[1]))
 
@@ -31,7 +32,7 @@ def test_mutation(de_solver):
 
 def test_crossover(de_solver):
     de_solver._init_population()
-    de_solver.idxs = list(range(de_solver.population_size)) 
+    de_solver.idxs = list(range(de_solver.population_size))  # Для примера, используем все индексы
     de_solver._mutation()
     cross_points = de_solver._crossover()
     assert len(cross_points) == de_solver.dimensions
